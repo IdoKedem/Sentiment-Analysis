@@ -17,4 +17,6 @@ Sentiment Analysis Work Report - Ido Kedem:
             - Easy to use, and provides an in-depth sentiment analysis of text using
             a relatively simple prompt ("Analyze the sentiment of the following sentence:")
 
-        NEXT STEP: Create an interface for easy usage (for users) and testing (for myself)
+        NEXT STEP:
+            - Create an interface for easy usage (for users) and testing (for myself)
+            - Maybe use Flask, since i am not as familiar with it as i would like to be
