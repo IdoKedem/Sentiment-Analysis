@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Sentiment Analysis</h1>
+        <h2>Analyze the sentiment of your text</h2>
+        <form method="POST" action="/">
+            <label for="text-input">Enter Text:</label>
+            <textarea id="text-input" name="text" rows="5" placeholder="Type your text here..."></textarea>
+            <button type="submit" class="submit-btn">Analyze Sentiment</button>
+        </form>
+
+        {% if sentiment %}
+        <div class="result">
+            <h3>Analysis Result:</h3>
+            <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

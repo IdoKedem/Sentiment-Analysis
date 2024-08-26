@@ -3,7 +3,7 @@ Sentiment Analysis Work Report - Ido Kedem:
 
 
 26.8
-    13:00 - 15:00, Finding the right API
+    13:00 - 15:00 Finding the right API
         1. Experimented with OpenAI's API:
             - Had to find a different solution since its no loger free
 
@@ -19,4 +19,13 @@ Sentiment Analysis Work Report - Ido Kedem:
 
         NEXT STEP:
             - Create an interface for easy usage (for users) and testing (for myself)
-            - Maybe use Flask, since i am not as familiar with it as i would like to be
+
+    13:45 - 17:15 Creating a UI
+        1. Choosing and using a UI:
+            - Even though i am sure of my Tkinter skills I chose to use Flask for this project,
+              which is also my first time using it. I decided to use flask since web development is
+              an important tool for me to have as a part of my repertoire.
+            - With the help of ChatGPT i generated html and css files that fit my needs, linked them to a python
+              backend and implemented in it a sentiment analysis using Groq.
+        NEXT STEP:
+            - Further test groq, and improve the instructions i gave him (system prompts)
