@@ -11,13 +11,15 @@ def main():
     # METHOD = POST
     with open('api key.txt') as f:
         api_key = f.read()
-        print(api_key)
     groq_client = Groq(api_key=api_key)
 
-    instructions = \
+    instructions: str = \
         'You are a sentiment analysis assistant.' \
         'You reply with an in-depth sentiment analysis of the ' \
-        'message you receive with an explanation, and nothing else.'
+        'message you receive with an explanation.' \
+        'You recognize contrasting sentiments in the same text and ' \
+        'explain the dynamics between them.' \
+        'Lastly, you add a summary of your analysis in a new line.'
     message = request.form['text']
 
     groq_response = \
@@ -36,7 +38,8 @@ def main():
         )
     sentiment = groq_response.choices[0].message.content
 
-    return render_template('index.html', sentiment=sentiment)
+    return render_template('index.html',
+                           sentiment=sentiment, message=message)
 
 
 

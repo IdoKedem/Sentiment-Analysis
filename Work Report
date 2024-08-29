@@ -29,3 +29,17 @@ Sentiment Analysis Work Report - Ido Kedem:
               backend and implemented in it a sentiment analysis using Groq.
         NEXT STEP:
             - Further test groq, and improve the instructions i gave him (system prompts)
+29.8
+    17:30 - 18:00 Perfecting system prompts
+        1. Prompt Engineering:
+            - In order to perfect my system prompt (instructions) i decided to look up
+              prompt engineering tips online. i used tips from Youtube, OpenAI and past
+              experience i had.
+            - I implemented these tips in my backend code and now the output is highly
+              elaborative. I exclusively asked the LLM to refer to contrasting sentiments
+              and explain them. I also asked it to provide a summary of the analysis.
+            NOTE: Although i did not spend as much time as i expected in configuring
+                  system prompts, it seems to me that I have reached sufficient
+                  results relative to this project's size.
+            NEXT STEP:
+                - Test Groq with ambiguous inputs, such as neutral texts, nonsense, typos etc.
