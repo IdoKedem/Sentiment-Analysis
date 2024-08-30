@@ -1,7 +1,8 @@
 
+HOW TO RUN:
+    to run the app, simply run app.py and navigate to 127.0.0.1:5000 on your browser
+
 Sentiment Analysis Work Report - Ido Kedem:
-
-
 26.8
     13:00 - 15:00 Finding the right API
         1. Experimented with OpenAI's API:
