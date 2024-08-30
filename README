@@ -44,3 +44,12 @@ Sentiment Analysis Work Report - Ido Kedem:
                   results for this project.
             NEXT STEP:
                 - Test Groq with ambiguous inputs, such as neutral texts, nonsense, typos etc.
+30.8.
+    15:00 - 15:30 Final improvements and tests
+        1. Further improving system prompts:
+            - Using a system prompt, asked groq to also name the emotion in a given text,
+              since it wasn't always doing so
+            - Decided to not you one/few shots technic, since Groq's output is structurally correct.
+        2. QA Testing:
+            - Tested with neutral statements, typos and gibberish
+            - Groq handles such texts efficiently provides satisfying results
