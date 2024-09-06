@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Sentiment Analysis Tool</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Text Sentiment Analysis</h1>
         <h2>Analyze the sentiment of your text</h2>
-        <form method="POST" action="/">
+        <form method="POST">
             <label for="text-input">Enter Text:</label>
             <textarea id="text-input" name="text" rows="5" placeholder="Type your text here..."></textarea>
             <button type="submit" class="submit-btn">Analyze Sentiment</button>

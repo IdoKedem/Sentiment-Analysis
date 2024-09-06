@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Sentiments of Two Texts</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compare Sentiments of Two Texts</h1>
+        <form method="POST" action="/compare-texts">
+            <div class="side-by-side">
+                <div class="input-group">
+                    <label for="text1">Text 1:</label>
+                    <textarea id="text1" name="text1" rows="8" placeholder="Enter the first text here..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="text2">Text 2:</label>
+                    <textarea id="text2" name="text2" rows="8" placeholder="Enter the second text here..."></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn">Compare Sentiments</button>
+        </form>
+
+        {% if comparison %}
+        <div class="result">
+            <h2>Comparison Result</h2>
+            <p><strong>Texts Comparison:</strong> {{ comparison }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

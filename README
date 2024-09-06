@@ -27,7 +27,7 @@ Sentiment Analysis Work Report - Ido Kedem:
               which is also my first time using it. I decided to use flask since web development is
               an important tool for me to have as a part of my repertoire.
             - With the help of ChatGPT i generated html and css files that fit my needs, linked them to a python
-              backend and implemented in it a sentiment analysis using Groq.
+              backend and implemented in it a sentiment analysis using Groq
         NEXT STEP:
             - Further test groq, and improve the instructions i gave it (system prompts)
 29.8
@@ -35,21 +35,38 @@ Sentiment Analysis Work Report - Ido Kedem:
         1. Prompt Engineering:
             - In order to improve my system prompt (instructions) i decided to look up
               prompt engineering tips online. i used tips from Youtube, OpenAI and past
-              experience i had.
+              experience i had
             - I implemented these tips in the backend code and now the output is highly
               elaborative. I exclusively asked the LLM to refer to contrasting sentiments
-              and explain them. I also asked it to provide a summary of the analysis.
+              and explain them. I also asked it to provide a summary of the analysis
             NOTE: Although i did not spend as much time as i expected in configuring
                   system prompts, it seems to me that I have reached sufficient
-                  results for this project.
+                  results for this project
             NEXT STEP:
-                - Test Groq with ambiguous inputs, such as neutral texts, nonsense, typos etc.
-30.8.
+                - Test Groq with ambiguous inputs, such as neutral texts, nonsense, typos etc
+30.8
     15:00 - 15:30 Final improvements and tests
         1. Further improving system prompts:
             - Using a system prompt, asked groq to also name the emotion in a given text,
               since it wasn't always doing so
-            - Decided to not you one/few shots technic, since Groq's output is structurally correct.
+            - Decided to not you one/few shots technic, since Groq's output is structurally correct
         2. QA Testing:
             - Tested with neutral statements, typos and gibberish
             - Groq handles such texts efficiently provides satisfying results
+6.9
+    13:30 - 15:30 Texts comparison
+        1. The Idea
+            - I decided to add a texts comparison feature: the LLM will
+              compare the sentiments of two given and fairly similar texts that
+              differ by punctuation, capital letter etc
+        2. Implementation
+            - Using the help of ChatGPT i generated a home page for my website which
+              navigates to the sentiment analysis page, and the (also newly generated) texts comparison page
+            - After debugging and fine tuning the frontend, i implemented the backend code for the
+              comparison and linked them
+            - For this feature i used the "one shot" technique in order to make sure
+              Groq replies like i intend it to
+        3. QA
+            - I tested the LLM with the instructions i gave it, by inputting similar and
+              not so similar text. as expected, Groq successfully analyzes and compares
+              the sentiments of the two texts, regardless of their meanings.
