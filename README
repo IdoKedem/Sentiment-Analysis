@@ -91,3 +91,13 @@ Sentiment Analysis Work Report - Ido Kedem:
               Additionally, noticed the model's replies get messier and
               harder to read the more i ask it to reply with.
               I plan to fix this by altering the system prompts.
+    18:30 - 19:00 Improving system prompt
+        1. Research
+            - I researched online how to further improve the system prompts i gave Groq. I also
+              used ChatGPT to further enrich my research
+        2. Implementation
+            - I implemented the tips and techniques i gathered online in the code.
+              One of the key changes i implemented was the use of a list of commands instead of a paragraph
+        3. QA
+            - I checked the output of the model several times for each input. I recognize an improvement
+              in the structure of the output as well as an improvement in the content of it

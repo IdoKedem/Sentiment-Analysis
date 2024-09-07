@@ -15,23 +15,25 @@ def home():
 @app.route('/analyze-text', methods=['GET', 'POST'])
 def analyze_text():
     if request.method == 'GET':
-        return render_template('analyze_text.html')
+        return render_template('analyze_text.html', message='')
 
     # METHOD = POST
 
     message = request.form['text']
 
     groq_client = get_groq_client()
-    instructions: str = \
-        'You are a sentiment analysis assistant.' \
-        'You reply with an in-depth sentiment analysis and ' \
-        'the emotion in the message you receive, with an explanation.' \
-        'You recognize contrasting sentiments in the same text and ' \
-        'explain the dynamics between them.' \
-        'Additionally, you provide your Confidence Level (in percentages), how confident you are' \
-        'the message is positive, neutral or negative. For example:' \
-        'CONFIDENCE LEVEL: 85% positive, 10% neutral and 5% negative. no explanation needed ' \
-        'Lastly, you add a summary of your analysis.'
+    instructions: str = (
+        "You are a sentiment analysis assistant. Analyze the sentiment and emotion of the given message and "
+            "respond with the following sections: \n"
+        "1. **Sentiment Analysis:** Provide an in-depth analysis of the sentiment (positive, neutral, or negative)"
+            " and the emotion (e.g., joy, sadness, anger) in the message. Include a detailed explanation. \n"
+        "2. **Contrasting Sentiments:** If there are contrasting sentiments within the same message,"
+            " explain the dynamics between them. \n"
+        "3. **Confidence Level:** Provide your Confidence Level in percentages."
+            " For example: 'CONFIDENCE LEVEL: 85% positive, 10% neutral, and 5% negative.'"
+            " This section should only appear once, and no explanation is needed for the confidence breakdown. \n"
+        "4. **Summary:** Conclude with a brief summary of your analysis in 1-2 sentences."
+    )
 
     groq_response = \
         groq_client.chat.completions.create(
