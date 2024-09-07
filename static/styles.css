@@ -1,4 +1,4 @@
-/* General Body Styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-/* General Container Styling */
+
 .container {
     text-align: center;
     background-color: #fff;
@@ -19,22 +19,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
+    box-sizing: border-box;
 }
 
-/* Heading Styles */
+
 h1, h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Paragraph Styling */
+
 p {
     color: #555;
     margin-bottom: 30px;
 }
 
-/* Button Styles */
+
 .button-container {
     display: flex;
     flex-direction: column;
@@ -53,6 +53,15 @@ p {
     transition: background-color 0.3s ease;
 }
 
+.btn-back {
+    background-color: #28a745;
+    margin-top: 30px;
+}
+
+.btn-back:hover {
+    background-color: #218838;
+}
+
 .btn:hover {
     background-color: #0056b3;
 }
@@ -60,13 +69,13 @@ p {
 .input-group {
     flex: 1;
     margin-bottom: 20px;
-    padding: 0 10px; /* Reduced padding between the text areas */
+    padding: 0 10px;
 }
 
 .side-by-side {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Reduced gap between text areas */
+    gap: 10px;
 }
 
 textarea {
@@ -80,7 +89,6 @@ textarea {
     height: 200px;
 }
 
-/* Submit Button Styling */
 button[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -97,7 +105,6 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Result Section Styling */
 .result {
     margin-top: 20px;
     padding: 20px;

@@ -46,14 +46,17 @@ def analyze_text():
         )
     sentiment = groq_response.choices[0].message.content
 
-    return render_template('analyze_text.html',
-                           sentiment=sentiment, message=message)
+    return render_template('analyze_text.html', sentiment=sentiment,
+                           message=message)
 
 
 @app.route('/compare-texts', methods=['GET', 'POST'])
 def compare_texts():
     if request.method == 'GET':
         return render_template('compare_texts.html')
+
+    #METHOD = POST
+
     text1 = request.form['text1']
     text2 = request.form['text2']
 
@@ -82,7 +85,8 @@ def compare_texts():
             model='llama3-8b-8192'
         )
     comparison = groq_response.choices[0].message.content
-    return render_template('compare_texts.html', comparison=comparison)
+    return render_template('compare_texts.html', comparison=comparison,
+                           text1=text1, text2=text2)
 
 if __name__ == '__main__':
     app.run(debug=True)

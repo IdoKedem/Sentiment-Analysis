@@ -13,15 +13,17 @@
             <div class="side-by-side">
                 <div class="input-group">
                     <label for="text1">Text 1:</label>
-                    <textarea id="text1" name="text1" rows="8" placeholder="Enter the first text here..."></textarea>
+                    <textarea id="text1" name="text1" rows="8" placeholder="Enter the first text here...">{{ text1 }}</textarea>
                 </div>
                 <div class="input-group">
                     <label for="text2">Text 2:</label>
-                    <textarea id="text2" name="text2" rows="8" placeholder="Enter the second text here..."></textarea>
+                    <textarea id="text2" name="text2" rows="8" placeholder="Enter the second text here...">{{ text2 }}</textarea>
                 </div>
             </div>
             <button type="submit" class="btn">Compare Sentiments</button>
         </form>
+
+        <a href="/" class="btn btn-back">Back to Main Page</a>
 
         {% if comparison %}
         <div class="result">

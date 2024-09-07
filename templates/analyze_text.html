@@ -12,13 +12,14 @@
         <h2>Analyze the sentiment of your text</h2>
         <form method="POST">
             <label for="text-input">Enter Text:</label>
-            <textarea id="text-input" name="text" rows="5" placeholder="Type your text here..."></textarea>
+            <textarea id="text-input" name="text" rows="5" placeholder="Type your text here...">{{message}}</textarea>
             <button type="submit" class="submit-btn">Analyze Sentiment</button>
         </form>
 
+        <a href="/" class="btn btn-back">Back to Main Page</a>
+
         {% if sentiment %}
         <div class="result">
-            <p><strong>Inputted text:</strong> {{ message }}</p>
             <h3>Analysis Result:</h3>
             <p><strong>Sentiment:</strong> {{ sentiment }}</p>
         </div>

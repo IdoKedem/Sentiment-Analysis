@@ -70,3 +70,10 @@ Sentiment Analysis Work Report - Ido Kedem:
             - I tested the LLM with the instructions i gave it, by inputting similar and
               not so similar text. as expected, Groq successfully analyzes and compares
               the sentiments of the two texts, regardless of their meanings.
+7.9
+    15:30 - 15:50 UI improvements
+        1. Back button
+            - Added a back button for easier navigation between the home page, text analysis and text comparison
+        2. Textarea changes
+            - The user's submitted text will still show in the text areas after submitting the form,
+              for easier preview and editing of it
