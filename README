@@ -77,3 +77,17 @@ Sentiment Analysis Work Report - Ido Kedem:
         2. Textarea changes
             - The user's submitted text will still show in the text areas after submitting the form,
               for easier preview and editing of it
+
+    16:40 - 17:00 Confidence Level
+        1. The Idea
+            - A confidence level feature for text analysis. The LLM will provide percentages
+              describing how confident it is the message is positive, neutral and negative. This
+              helps with reliability and transparency between the user/developer and the model.
+        2. Implementation
+            - I added some system prompts that guide the model to provide these percentages.
+              For this feature i also used the "one shot" technique
+        3. QA
+            - The model provides the percentages as expected, but sometimes he does so twice in the same reply.
+              Additionally, noticed the model's replies get messier and
+              harder to read the more i ask it to reply with.
+              I plan to fix this by altering the system prompts.

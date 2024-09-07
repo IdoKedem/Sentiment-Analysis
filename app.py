@@ -28,7 +28,10 @@ def analyze_text():
         'the emotion in the message you receive, with an explanation.' \
         'You recognize contrasting sentiments in the same text and ' \
         'explain the dynamics between them.' \
-        'Lastly, you add a summary of your analysis in a new line.'
+        'Additionally, you provide your Confidence Level (in percentages), how confident you are' \
+        'the message is positive, neutral or negative. For example:' \
+        'CONFIDENCE LEVEL: 85% positive, 10% neutral and 5% negative. no explanation needed ' \
+        'Lastly, you add a summary of your analysis.'
 
     groq_response = \
         groq_client.chat.completions.create(
